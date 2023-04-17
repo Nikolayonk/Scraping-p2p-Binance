@@ -33,5 +33,5 @@ pip install -r req.txt
 python3 main.py
 ```
 # Результат:
-<img src="https://i.postimg.cc/c4tvNJLF/2023-04-17-12-09-12.png">
+![Результат csv](https://i.postimg.cc/c4tvNJLF/2023-04-17-12-09-12.png)
 
