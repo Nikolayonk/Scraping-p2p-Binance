@@ -7,8 +7,8 @@ def get_data():
     data_list = []
 
     l_usd = ["USDT","BTC","BUSD","BNB","ETH", "DAI"]
-
     buy_sell = ["BUY","SELL"]
+    
     for bs in buy_sell:
         for lr in l_usd:
             website = "https://p2p.binance.com/bapi/c2c/v2/friendly/c2c/adv/search"
@@ -34,11 +34,11 @@ def get_data():
                 item_surplusAmount = im.get('adv').get("surplusAmount")
                 item_tradeType = im.get('adv').get("tradeType")
                 item_trade = im.get('adv').get("tradeMethods")
-
+               #Объявляем пустой массив, для формирования списка банков, конкретной пары торговли.
                 pay_list = []
                 for ps in item_trade:
                     item_ntrade = ps.get("tradeMethodName")
-  
+                        
                     pay_list.append(item_ntrade)
             data_list.append(
                 [item_fiat,item_price,item_asset,item_surplusAmount,item_tradeType,str(pay_list)]
